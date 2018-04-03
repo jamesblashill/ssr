@@ -18,12 +18,14 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "http-server": "^0.11.1",
     "mini-css-extract-plugin": "^0.4.0",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "build:static": "yarn build && node build/render.js"
+    "build:static": "yarn build && node build/render.js",
+    "server": "yarn build:static && http-server build"
   }
 }
